@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography Day — North Point Senior Secondary School, Arjunpur</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,0..144,500&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --black:#14100d;
+    --black-2:#1c1611;
+    --paper:#f3ecdd;
+    --paper-2:#eae1cc;
+    --safelight:#c1421a;
+    --gold:#d8a857;
+    --ink:#2a211a;
+    --mist:#8c8375;
+    --mist-light:#5b5346;
+  }
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{
+      animation:none !important;
+      transition:none !important;
+    }
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero{
+    position:relative;
+    min-height:100vh;
+    background:
+      radial-gradient(
+        circle at 50% 42%,
+        #241c15 0%,
+        var(--black) 60%,
+        #0c0906 100%
+      );
+    color:var(--paper);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    padding:6rem 1.5rem 4rem;
+  }
+
+  .aperture{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:min(78vw,780px);
+    height:min(78vw,780px);
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+  }
+
+  .aperture .blade{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    border:1px solid rgba(216,168,87,0.14);
+    border-radius:50%;
+    transform-origin:center;
+  }
+
+  .aperture .blade:nth-child(1){
+    transform:translate(-50%,-50%) scale(1);
+  }
+
+  .aperture .blade:nth-child(2){
+    transform:translate(-50%,-50%) scale(0.78);
+    border-color:rgba(216,168,87,0.18);
+  }
+
+  .aperture .blade:nth-child(3){
+    transform:translate(-50%,-50%) scale(0.56);
+    border-color:rgba(216,168,87,0.24);
+  }
+
+  .aperture .blade:nth-child(4){
+    transform:translate(-50%,-50%) scale(0.34);
+    border-color:rgba(193,66,26,0.35);
+  }
+
+  .aperture .blade:nth-child(5){
+    transform:translate(-50%,-50%) scale(0.16);
+    border-color:rgba(216,168,87,0.5);
+    animation:aperture-breathe 6s ease-in-out infinite;
+  }
+
+  @keyframes aperture-breathe{
+    0%,100%{
+      transform:translate(-50%,-50%) scale(0.16);
+    }
+
+    50%{
+      transform:translate(-50%,-50%) scale(0.12);
+    }
+  }
+
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    z-index:2;
+    margin-bottom:1.6rem;
+  }
+
+  .hero h1{
+    z-index:2;
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(2.6rem,8vw,6rem);
+    line-height:.98;
+    letter-spacing:-.01em;
+  }
+
+  .hero h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--safelight);
+  }
+
+  .hero .sub{
+    z-index:2;
+    margin-top:1.8rem;
+    font-size:clamp(1rem,2vw,1.2rem);
+    color:#cfc6b4;
+    max-width:34rem;
+    line-height:1.6;
+  }
+
+  .hero .school{
+    z-index:2;
+    margin-top:3rem;
+    font-family:'Space Mono',monospace;
+    font-size:.78rem;
+    letter-spacing:.08em;
+    color:var(--mist);
+    display:flex;
+    gap:.6rem;
+    align-items:center;
+  }
+
+  .hero .school .dot{
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:var(--mist);
+  }
+
+  .scroll-cue{
+    position:absolute;
+    bottom:2.4rem;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+    font-family:'Space Mono',monospace;
+    font-size:.68rem;
+    letter-spacing:.2em;
+    color:var(--mist);
+    text-transform:uppercase;
+  }
+
+  /* ---------- INTRO ---------- */
+
+  .intro{
+    max-width:920px;
+    margin:0 auto;
+    padding:5.5rem 1.5rem 3rem;
+    text-align:center;
+  }
+
+  .intro .kicker{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--safelight);
+    margin-bottom:1rem;
+  }
+
+  .intro h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(1.8rem,3.6vw,2.6rem);
+    line-height:1.15;
+    color:var(--ink);
+    margin-bottom:1.2rem;
+  }
+
+  .intro p{
+    color:var(--mist-light);
+    font-size:1.05rem;
+    line-height:1.7;
+    max-width:38rem;
+    margin:0 auto;
+  }
+
+  /* ---------- CONTACT SHEET ---------- */
+
+  .sheet-wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:2rem 1.5rem 7rem;
+  }
+
+  .sheet-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    border-bottom:1px solid var(--mist);
+    padding-bottom:.9rem;
+    margin-bottom:.4rem;
+    font-family:'Space Mono',monospace;
+    font-size:.7rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--mist-light);
+  }
+
+  .frame{
+    position:relative;
+    display:grid;
+    grid-template-columns:64px 96px 1fr auto;
+    gap:1.2rem;
+    align-items:center;
+    padding:1.3rem .5rem 1.3rem 0;
+    border-bottom:1px solid var(--paper-2);
+    background:var(--paper);
+  }
+
+  .frame.rank-1{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(216,168,87,.14),
+        rgba(216,168,87,0) 55%
+      );
+    border-bottom:1px solid var(--gold);
+  }
+
+  .frame .rank{
+    font-family:'Space Mono',monospace;
+    font-size:1.6rem;
+    font-weight:700;
+    color:var(--mist);
+    text-align:center;
+    line-height:1;
+  }
+
+  .frame.rank-1 .rank{
+    color:var(--safelight);
+    font-size:1.9rem;
+  }
+
+  .frame .rank small{
+    display:block;
+    font-size:.55rem;
+    letter-spacing:.1em;
+    color:var(--mist);
+    margin-top:.15rem;
+    font-weight:400;
+  }
+
+  /* ---------- IMAGE ---------- */
+
+  .frame .thumb{
+    width:96px;
+    height:72px;
+    border:1px solid var(--paper-2);
+    background:var(--paper-2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    position:relative;
+  }
+
+  .frame .thumb img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  cursor:zoom-in;
+  transition:transform .2s ease;
+}
+  
+
+  .frame .thumb .placeholder{
+    font-family:'Space Mono',monospace;
+    font-size:.55rem;
+    letter-spacing:.04em;
+    color:var(--mist);
+    text-align:center;
+    padding:.3rem;
+    line-height:1.4;
+  }
+
+  /* ---------- META ---------- */
+
+  .frame .meta .name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.18rem;
+    color:var(--ink);
+    line-height:1.25;
+  }
+
+  .frame.rank-1 .meta .name{
+    color:#8a3311;
+  }
+
+  .frame .meta .class{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.14rem;
+    color:var(--ink);
+    line-height:1.25;
+  }
+
+  .frame.rank-1 .meta .class{
+    color:#8a3311;
+  }
+
+  .frame .meta .members{
+    margin-top:.5rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:.15rem .8rem;
+  }
+
+  .frame .meta .members span{
+    font-family:'Space Mono',monospace;
+    font-size:.68rem;
+    letter-spacing:.02em;
+    color:var(--mist-light);
+  }
+
+  .frame .desc{
+    margin-top:.5rem;
+    font-family:'Work Sans',sans-serif;
+    font-size:.78rem;
+    line-height:1.5;
+    color:var(--mist-light);
+    background:var(--paper-2);
+    border-left:2px solid var(--gold);
+    padding:.5rem .7rem;
+    max-width:26rem;
+  }
+
+  .frame .desc b{
+    color:var(--ink);
+    font-weight:600;
+  }
+
+  /* ---------- VOTES ---------- */
+
+  .frame .votes{
+    text-align:right;
+    font-family:'Space Mono',monospace;
+    white-space:nowrap;
+  }
+
+  .frame .votes .count{
+    font-size:.85rem;
+    color:var(--ink);
+  }
+
+  .frame .votes .count b{
+    font-size:1.05rem;
+  }
+
+  .frame .votes .position{
+    margin-top:.3rem;
+    display:inline-block;
+    font-size:.62rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:.28rem .6rem;
+    border-radius:2px;
+    background:var(--paper-2);
+    color:var(--mist-light);
+  }
+
+  .frame.rank-1 .votes .position{
+    background:var(--gold);
+    color:#2a1a05;
+    font-weight:700;
+  }
+
+  .frame.rank-2 .votes .position{
+    background:#d8d0bc;
+    color:var(--ink);
+  }
+
+  .frame.rank-3 .votes .position{
+    background:#e3d3b6;
+    color:var(--ink);
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  footer{
+    background:var(--black);
+    color:var(--mist);
+    text-align:center;
+    padding:3.2rem 1.5rem;
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.08em;
+  }
+
+  footer .fname{
+    color:var(--paper);
+    font-family:'Fraunces',serif;
+    font-size:1rem;
+    letter-spacing:0;
+    margin-bottom:.5rem;
+    font-weight:500;
+  }
+
+  footer .note{
+    margin-top:1.4rem;
+    color:#5b5346;
+    font-size:.66rem;
+    max-width:32rem;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.6;
+  }
+
+  /* ---------- MOBILE ---------- */
+
+  @media (max-width:680px){
+
+    .frame{
+      grid-template-columns:38px 64px 1fr;
+      row-gap:.5rem;
+    }
+
+    .frame .votes{
+      grid-column:1 / -1;
+      text-align:left;
+      display:flex;
+      align-items:center;
+      gap:.7rem;
+    }
+
+    .frame .thumb{
+      width:64px;
+      height:48px;
+    }
+
+  }
+
+  @media (max-width:560px){
+
+    .frame{
+      grid-template-columns:38px 64px 1fr;
+      gap:.6rem;
+    }
+
+    .frame .rank{
+      font-size:1.2rem;
+    }
+
+    .frame.rank-1 .rank{
+      font-size:1.4rem;
+    }
+
+    .frame .meta .class{
+      font-size:1rem;
+    }
+
+    .frame .votes .count{
+      font-size:.72rem;
+    }
+
+    .hero .school{
+      flex-direction:column;
+      gap:.35rem;
+    }
+
+  }
+
+  /* ---------- IMAGE LIGHTBOX ---------- */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .25s ease, visibility .25s ease;
+  z-index:9999;
+}
+
+.lightbox.active{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.lightbox img{
+  max-width:95vw;
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  cursor:default;
+}
+
+.lightbox-close{
+  position:absolute;
+  top:1.2rem;
+  right:1.5rem;
+  border:none;
+  background:none;
+  color:white;
+  font-size:3rem;
+  line-height:1;
+  cursor:pointer;
+  z-index:10000;
+  font-family:Arial,sans-serif;
+}
+
+.lightbox-close:hover{
+  opacity:.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="aperture" aria-hidden="true">
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+  </div>
+
+  <div class="eyebrow">
+    19 · 08 — World Photography Day
+  </div>
+
+  <h1>
+    Through Their<br>
+    <em>Lens</em>
+  </h1>
+
+  <p class="sub">
+    The results of North Point's inter-class photography competition —
+    ten groups, fifty photographers, one winning shot.
+  </p>
+
+  <div class="school">
+    <span>North Point Senior Secondary School</span>
+    <span class="dot"></span>
+    <span>Arjunpur Branch, Kolkata</span>
+  </div>
+
+  <div class="scroll-cue">
+    Scroll for results ↓
+  </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+  <div class="kicker">
+    Competition Results
+  </div>
+
+  <h2>
+    Every class picked up a camera.<br>
+    Here's who framed it best.
+  </h2>
+
+  <p>
+    Ten groups, one from every class and stream, each with five
+    participants, entered a single photograph together for Photography
+    Day. Votes were cast by the school community, and the tally below —
+    read like frames on a contact sheet — decides the order.
+  </p>
+
+</section>
+
+
+<!-- ================= RESULTS ================= -->
+
+<div class="sheet-wrap">
+
+  <div class="sheet-header">
+    <span>Contact Sheet — Final Standings</span>
+    <span>10 Frames</span>
+  </div>
+
+
+  <!-- ================= RANK 1 ================= -->
+
+  <div class="frame rank-1">
+
+    <div class="rank">
+      01
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class xii commerce.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class XII — Commerce — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. Sohum Biswas</span>
+        <span>2. Deep Das</span>
+        <span>3. Adhiraj</span>
+        <span>4. Anubhav</span>
+        <span>5. Priyanjana</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>154</b> votes)
+      </div>
+
+      <div class="position">
+        1st Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 2 ================= -->
+
+  <div class="frame rank-2">
+
+    <div class="rank">
+      02
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class xii science a.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class XII Science A — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>147</b> votes)
+      </div>
+
+      <div class="position">
+        2nd Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 3 ================= -->
+
+  <div class="frame rank-3">
+
+    <div class="rank">
+      03
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class xii science b.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class XII — Science — B — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>139</b> votes)
+      </div>
+
+      <div class="position">
+        3rd Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 4 ================= -->
+
+  <div class="frame">
+
+    <div class="rank">
+      04
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class ix Girls.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class IX — Girls — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>128</b> votes)
+      </div>
+
+      <div class="position">
+        4th Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 5 ================= -->
+
+  <div class="frame">
+
+    <div class="rank">
+      05
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class xi commerce.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class XI — Commerce — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>121</b> votes)
+      </div>
+
+      <div class="position">
+        5th Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 6 ================= -->
+
+  <div class="frame">
+
+    <div class="rank">
+      06
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class xii arts.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class XII — Arts — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>113</b> votes)
+      </div>
+
+      <div class="position">
+        6th Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 7 ================= -->
+
+  <div class="frame">
+
+    <div class="rank">
+      07
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class xi science.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class XI — Science — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>102</b> votes)
+      </div>
+
+      <div class="position">
+        7th Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 8 ================= -->
+
+  <div class="frame">
+
+    <div class="rank">
+      08
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class x .jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class X — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>95</b> votes)
+      </div>
+
+      <div class="position">
+        8th Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 9 ================= -->
+
+  <div class="frame">
+
+    <div class="rank">
+      09
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class xi arts.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class XI — Arts — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>87</b> votes)
+      </div>
+
+      <div class="position">
+        9th Place
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= RANK 10 ================= -->
+
+  <div class="frame">
+
+    <div class="rank">
+      10
+      <small>frame</small>
+    </div>
+
+    <div class="thumb">
+      <img
+        src="imgs/Class ix boys.jpg"
+        alt="Photograph by the group"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="placeholder" style="display:none;">
+        Image unavailable
+      </div>
+    </div>
+
+    <div class="meta">
+
+      <div class="class">
+        Class IX — Boys — Group Entry
+      </div>
+
+      <div class="members">
+        <span>1. MEMBER NAME</span>
+        <span>2. MEMBER NAME</span>
+        <span>3. MEMBER NAME</span>
+        <span>4. MEMBER NAME</span>
+        <span>5. MEMBER NAME</span>
+      </div>
+
+      <div class="desc">
+        <b>About this photograph:</b>
+        What the photograph is about, and what it means to the photographer.
+      </div>
+
+    </div>
+
+    <div class="votes">
+      <div class="count">
+        (<b>79</b> votes)
+      </div>
+
+      <div class="position">
+        10th Place
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="fname">
+    North Point Senior Secondary School
+  </div>
+
+  <div>
+    ARJUNPUR BRANCH · KOLKATA
+  </div>
+
+  <div class="note">
+    Photography Day Competition Results — group member names,
+    votes, and images on this page are placeholders. Replace them
+    with the actual participant names, photographs, and tallies
+    before publishing.
+  </div>
+
+</footer>
+
+<!-- IMAGE LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImage" src="" alt="Expanded photograph">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  document.querySelectorAll(".frame .thumb img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+</script>
+
+</body>
+</html>
