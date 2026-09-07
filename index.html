@@ -225,6 +225,66 @@
     margin:0 auto;
   }
 
+  /* ---------- PRINCIPAL'S DESK ---------- */
+
+  .principal{
+    max-width:760px;
+    margin:0 auto;
+    padding:1rem 1.5rem 5rem;
+  }
+
+  .principal-card{
+    position:relative;
+    background:var(--paper-2);
+    border-left:3px solid var(--safelight);
+    padding:2.6rem 2.4rem;
+  }
+
+  .principal-card .kicker{
+    font-family:'Space Mono',monospace;
+    font-size:.7rem;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--safelight);
+    margin-bottom:1.1rem;
+  }
+
+  .principal-card h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(1.4rem,2.6vw,1.8rem);
+    color:var(--ink);
+    margin-bottom:1.3rem;
+  }
+
+  .principal-card p{
+    font-size:.98rem;
+    line-height:1.75;
+    color:var(--mist-light);
+    margin-bottom:1.1rem;
+  }
+
+  .principal-card p:last-of-type{
+    margin-bottom:0;
+    font-style:italic;
+    color:var(--ink);
+  }
+
+  .principal-card .sign{
+    margin-top:1.8rem;
+    font-family:'Space Mono',monospace;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--mist);
+  }
+
+  @media (max-width:560px){
+    .principal-card{
+      padding:2rem 1.4rem;
+    }
+  }
+
   /* ---------- CONTACT SHEET ---------- */
 
   .sheet-wrap{
@@ -630,6 +690,47 @@
 </section>
 
 
+<!-- ================= PRINCIPAL'S DESK ================= -->
+
+<section class="principal">
+
+  <div class="principal-card">
+
+    <div class="kicker">
+      A Note From The Principal
+    </div>
+
+    <h3>
+      From the Principal's Desk
+    </h3>
+
+    <p>
+      It is my pleasure to welcome you to our school's first-ever
+      Photography Day and Photography Competition. This event marks a
+      new chapter in our school's journey, giving our students an
+      opportunity to explore the world through their lenses and express
+      their creativity, imagination, and unique perspectives.
+    </p>
+
+    <p>
+      Photography allows us to discover beauty in the simplest moments
+      and preserve memories that might otherwise fade with time. Through
+      this initiative, we hope to encourage our students to observe,
+      create, and tell stories through the art of photography. May this
+      first edition inspire many more creative pursuits and become the
+      beginning of a wonderful tradition in our school.
+    </p>
+
+    <p>
+      Wishing all our participants the very best and a memorable
+      Photography Day!
+    </p>
+
+  </div>
+
+</section>
+
+
 <!-- ================= RESULTS ================= -->
 
 <div class="sheet-wrap">
@@ -670,14 +771,9 @@
       <div class="members">
         <span>1. Sohum Biswas</span>
         <span>2. Deep Das</span>
-        <span>3. Adhiraj</span>
+        <span>3. Adhiraj Choudhury</span>
         <span>4. Anubhab Dhara</span>
         <span>5. Priyanjana Das</span>
-      </div>
-
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
       </div>
 
     </div>
@@ -723,16 +819,11 @@
       </div>
 
       <div class="members">
-        <span>1. Saurav Halder</span>
+        <span>1. Sourav Halder</span>
         <span>2. Mainak Chakrobarty</span>
         <span>3. Monalisa Chanda</span>
         <span>4. Dedipyanman Bhattacharjee</span>
         <span>5. Ritika Sharma</span>
-      </div>
-
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
       </div>
 
     </div>
@@ -785,11 +876,6 @@
         <span>5. Siddharta Das</span>
       </div>
 
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
-      </div>
-
     </div>
 
     <div class="votes">
@@ -838,11 +924,6 @@
         <span>3. Nena Kushwaha</span>
         <span>4. Shreyoshi choudhury</span>
         <span>5. -</span>
-      </div>
-
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
       </div>
 
     </div>
@@ -895,11 +976,6 @@
         <span>5. Monobina Barat</span>
       </div>
 
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
-      </div>
-
     </div>
 
     <div class="votes">
@@ -948,11 +1024,6 @@
         <span>3. Dipa Mahapatra</span>
         <span>4. Tripti Das</span>
         <span>5. -</span>
-      </div>
-
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
       </div>
 
     </div>
@@ -1005,11 +1076,6 @@
         <span>5. Suhani Bhattachaya</span>
       </div>
 
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
-      </div>
-
     </div>
 
     <div class="votes">
@@ -1058,11 +1124,6 @@
         <span>3. Swastika Chatterjee</span>
         <span>4. Joyeta Sardar</span>
         <span>5. Bihan Pramanik</span>
-      </div>
-
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
       </div>
 
     </div>
@@ -1115,11 +1176,6 @@
         <span>5. -</span>
       </div>
 
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
-      </div>
-
     </div>
 
     <div class="votes">
@@ -1168,11 +1224,6 @@
         <span>3. Anubhav Mitra</span>
         <span>4. Srijon Adhikary</span>
         <span>5. -</span>
-      </div>
-
-      <div class="desc">
-        <b>About this photograph:</b>
-        What the photograph is about, and what it means to the photographer.
       </div>
 
     </div>
